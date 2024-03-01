@@ -10,6 +10,11 @@ app.use(cors({
   credentials: true,
 }));
 
+// prismaの呼び出し
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
+
+
 
 // ポート3000を使用して、読み込みができるかテストする
 app.listen(3000, () => {
